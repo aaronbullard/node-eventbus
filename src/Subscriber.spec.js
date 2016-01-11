@@ -1,5 +1,6 @@
-var Dispatcher = require('./EventBus.js');
-var Subscriber = require('./Subscriber.js');
+var app = require('./index.js');
+var Dispatcher = app.EventBus;
+var Subscriber = app.Subscriber;
 
 describe('Subscriber', function(){
 

@@ -2,7 +2,7 @@
   "name": "node-eventbus",
   "version": "0.0.1",
   "description": "An Event Bus with an extendable Subscriber class",
-  "main": "src/EventBus.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "istanbul cover node_modules/.bin/jasmine -x **.spec.js"
   },

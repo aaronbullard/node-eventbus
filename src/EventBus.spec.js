@@ -1,4 +1,4 @@
-var EventBus = require('./EventBus.js')
+var EventBus = require('./index.js').EventBus;
 
 function ThingWasSavedEvent(param1, param2){
   this.param1 = param1;
