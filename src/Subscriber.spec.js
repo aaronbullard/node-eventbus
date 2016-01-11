@@ -1,0 +1,31 @@
+var Dispatcher = require('./EventBus.js');
+var Subscriber = require('./Subscriber.js');
+
+describe('Subscriber', function(){
+
+  it('can be extended', function(){
+    // Event
+    function ObjectWasSaved(obj){
+      this.obj = obj;
+    }
+
+    // Listener
+    function MySubscriber(){
+      this.whenObjectWasSaved = function(event){
+        // do something
+      }
+    }
+
+    MySubscriber.prototype = Subscriber;
+
+    var mySubscriber = new MySubscriber();
+
+    spyOn(mySubscriber, 'whenObjectWasSaved').and.callThrough();
+
+    Dispatcher.subscribe('ObjectWasSaved', mySubscriber);
+
+    Dispatcher.fire(new ObjectWasSaved({}));
+
+    expect(mySubscriber.whenObjectWasSaved).toHaveBeenCalled();
+  });
+});

@@ -1,0 +1,28 @@
+{
+  "name": "node-eventbus",
+  "version": "0.0.1",
+  "description": "An Event Bus with an extendable Subscriber class",
+  "main": "src/EventBus.js",
+  "scripts": {
+    "test": "istanbul cover node_modules/.bin/jasmine -x **.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronbullard/node-eventbus.git"
+  },
+  "keywords": [
+    "event",
+    "bus",
+    "subscriber"
+  ],
+  "author": "Aaron Bullard <jabullard@aol.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronbullard/node-eventbus/issues"
+  },
+  "homepage": "https://github.com/aaronbullard/node-eventbus#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "jasmine": "^2.4.1"
+  }
+}
